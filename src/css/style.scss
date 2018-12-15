@@ -1,0 +1,24 @@
+$primary:#dfe1e6;
+$secondary:#fff;
+$headerHeight:50px;
+
+body{
+	background-color: $primary;
+	padding-top:$headerHeight+10px; 
+
+	header{
+		background-color:$secondary;
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		padding:0 30px;
+		line-height: $headerHeight;
+		height: $headerHeight;
+		box-shadow: 2px 6px 12px #ccc;
+		h1{
+			font-size: 18px;
+			font-weight:bold;
+		}
+	}
+}
