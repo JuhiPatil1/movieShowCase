@@ -5,11 +5,13 @@
   "main": "src/",
   "license": "MIT",
   "dependencies": {
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
     "css-loader": "^2.0.1",
     "json-loader": "^0.5.7",
+    "moment": "^2.23.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "scss-loader": "^0.0.1",

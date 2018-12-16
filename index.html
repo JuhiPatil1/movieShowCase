@@ -3,15 +3,32 @@
   <head>
 	<title>movieShowcase</title> 
 	<link rel="stylesheet" type="text/css" href="./build/resets.css">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
   	<header>
-  		<h1 style="font-family:courier;">MOVIETIME</h1>
+  		<h1>MOVIETIME</h1>
   	</header>
 
   <div class="search-bar">
-  	<input style="font-family:courier;" type="text" name="search" placeholder="search">
-  	</div>
+  <input style="font-family:courier;" id="myInput" type="search" name="search" placeholder="Search">
+    <button class="search-btn" onclick="onSearch()"><i class="material-icons">search</i></button>
+  </div>
+
+
+<div class="container" id="app-content">
+  <div class="loader"><span>Loading</span></div>
+  <div class="card-list" id=card-list />
+</div>
+</div>
+<div id="mybutton">
+ <button class="btn-add"><i class="material-icons">add</i></button>
+</div>
+</div>
+
+
+
     <script src="build/bundle.js"></script>
   </body>
 </html>

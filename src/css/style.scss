@@ -2,9 +2,14 @@ $primary:#dfe1e6;
 $secondary:#fff;
 $headerHeight:50px;
 
+
 body{
 	background-color: $primary;
 	padding-top:$headerHeight+10px; 
+	&,*{
+
+		box-sizing:border-box;
+	}
 
 	header{
 		background-color:$secondary;
@@ -19,6 +24,181 @@ body{
 		h1{
 			font-size: 18px;
 			font-weight:bold;
+			font-family: Palatino;
+
 		}
 	}
+
+	.search-bar{
+		width: 95%;
+    	margin: 0 auto;
+    	display: flex;
+		height: 40px;
+		border:1px solid #999;
+		border-radius:5px;
+		input{
+			height: 38px;
+			width: calc(100% - 40px);
+			border:none;
+			padding:0 30px;
+			border-radius:5px 0 0 5px;
+			outline: none;
+
+		}
+		button.search-btn{
+			height: 38px;
+			width:40px;
+			background-color:#ccc;
+			border:none;
+			border-radius:0 5px 5px 0
+		}
+	}
+	.container{
+		&:not(.is-loading){
+			.loader{
+				display: none;
+			}
+		}
+		&.is-loading{
+			.card-list{
+				display: none;
+			}
+		}
+	}
+	.card-list {
+			padding-top: 10px;
+			display: flex;
+			flex-wrap: wrap;
+	}
+		/* Float four columns side by side */
+	.column {
+	  float: left;
+	  width: 33%;
+	  padding: 5px 10px;
+
+		@media screen and (max-width: 600px) {
+		    width: 100%;
+		    display: block;
+		}
+	}
+	.card {
+  		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  		//padding: 16px;
+  		padding-top:20px;
+  		height: 200px;
+  		text-align: center;
+  		background-color: #f1f1f1;
+  		position:relative;
+  					background-repeat: no-repeat;
+  			background-size:contain;
+  			background-position:center;
+  		.movie-poster{
+  			height: calc(100% - 45px);
+  			width: 100%;
+  			background-repeat: no-repeat;
+  			background-size:contain;
+  			background-position:center;
+  		}
+  		.movie-content{
+  			background-color:rgba(#000, 0.5);
+  			color: #fff;
+  			height: 45px;
+  			#edit-titlt{
+
+  			}
+  			input{
+  				outline: none;
+  				box-shadow:none;
+  				background-color:transparent;
+  				color: #fff;
+  				text-align: center;
+  				border:none;
+  				border-bottom:1px solid #fff;
+  			}
+	  		h3,#edit-title{
+
+	  			font-weight: bold;
+	  			margin-bottom: 5px; 
+	  			height: 20px;
+	  			line-height: 20px;
+	  		}
+	  		>span,#edit-year{
+	  			height: 20px;
+	  			line-height: 20px;
+	  		}
+	  		p{
+	  			display: -webkit-box;
+	  			overflow : hidden;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 5;
+				-webkit-box-orient: vertical;  
+	  		}
+  		}
+	}
+	.btn-group{
+		position:absolute;
+		top:0;
+		padding: 5px;
+		right:0;
+		.btn {
+	  		background-color: #ccc;
+	  		border: none;
+	  		height: 20px;
+	  		width: 20px;
+	  		color: white;
+	  		padding:0;
+	  		font-size: 12px;
+	  		cursor: pointer;
+	  		border-radius:50%;
+	  		&.btn-delete{
+		  		color: #fff;
+		  		background-color:#f00;
+		  	}
+		  	&.btn-edit{
+		  		color: #fff;
+		  		background-color:#00f;
+		  	}
+		  	i{
+		  		font-size: 12px;
+		  		line-height: 20px;
+		  		text-align: center;
+		  	}
+		}
+	}
+	.btn-add {
+  		background-color : #31B0D5;
+  		color: white;
+  		border-radius: 4px;
+  		width: 50px;
+  		border:1px solid #46b8da;
+	  	height: 50px;
+  		text-align: center;
+  		border-radius:50%;
+	}
+	#mybutton {
+	  position: fixed;
+	  bottom: 10px;
+	  right: 10px;
+	  width: 50px;
+	  height: 50px;
+	  
+	}
 }
+
+	/* Responsive columns */
+
+/* Remove extra left and right margins, due to padding */
+.row {
+	margin: 0 -5px;
+	padding:5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding:5px;
+}
+
+/* Style the counter cards */
