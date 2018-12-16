@@ -16,19 +16,32 @@
     <button class="search-btn" onclick="onSearch()"><i class="material-icons">search</i></button>
   </div>
 
-
+  <div class="sort-type ">
+    <span>Sort By : </span>
+    <div class="pill-cont">
+      <div class="sort-item  pill-btn sort-by-title">
+        <input onchange="onSort('title')" id="sort-title" type="radio" checked name="sort">
+        <label for="sort-title" class="pill-label">
+          Title
+        </label>
+      </div>
+      <div class="sort-item pill-btn sort-by-year">
+        <input onchange="onSort('release_date')" id="sort-year" type="radio" name="sort">
+        <label for="sort-year" class="pill-label">
+          Year
+        </label>
+      </div>
+    </div>
+  </div>
 <div class="container" id="app-content">
-  <div class="loader"><span>Loading</span></div>
+  <div class="loader"><span>{</span><span>}</span></div>
   <div class="card-list" id=card-list />
 </div>
 </div>
 <div id="mybutton">
- <button class="btn-add"><i class="material-icons">add</i></button>
+ <button onclick="onAdd()" class="btn-add"><i class="material-icons">add</i></button>
 </div>
 </div>
-
-
-
     <script src="build/bundle.js"></script>
   </body>
 </html>
