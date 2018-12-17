@@ -8,7 +8,7 @@ document.addEventListener('readystatechange',function(e){
 	let data=[];
 	let loading=false;
 	let add=false;
-	var edit=null;
+	let edit=null;
 	let sort='title';
 	const appContent=document.getElementById('app-content');
 	const cardList=document.getElementById('card-list');
